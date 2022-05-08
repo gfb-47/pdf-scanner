@@ -4,6 +4,10 @@ import '../../features/home/presentation/pages/home_page.dart';
 import '../../features/pick_image/presentation/pages/pick_image_page.dart';
 
 class RouteGenerator {
+  static void a(BuildContext context) {
+    Navigator.pushNamed(context, '/pick_image');
+  }
+
   static Route<dynamic> generateRoute(RouteSettings settings) {
     // Getting arguments passed in while calling Navigator.pushNamed
     final args = settings.arguments;
@@ -42,7 +46,7 @@ class RouteGenerator {
           title: const Text('Error'),
         ),
         body: const Center(
-          child: Text('Algo deu errado'),
+          child: Text('Something went wrong'),
         ),
       );
     });

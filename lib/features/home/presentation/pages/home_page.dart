@@ -16,7 +16,7 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               PrimaryButton(
-                  onTap: () => Navigator.of(context).pushNamed('/pick_image'),
+                  onTap: () => Navigator.pushNamed(context, '/pick_image'),
                   text: 'Pegar imagem da galeria'),
               PrimaryButton(onTap: () => log('rota'), text: 'Tirar foto')
             ],
