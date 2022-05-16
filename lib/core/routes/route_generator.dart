@@ -1,23 +1,20 @@
 import 'package:flutter/material.dart';
 
+import '../../features/get_image/presentation/pages/pick_image_page.dart';
 import '../../features/home/presentation/pages/home_page.dart';
-import '../../features/pick_image/presentation/pages/pick_image_page.dart';
+import 'route_strings.dart';
 
 class RouteGenerator {
-  static void a(BuildContext context) {
-    Navigator.pushNamed(context, '/pick_image');
-  }
-
   static Route<dynamic> generateRoute(RouteSettings settings) {
     // Getting arguments passed in while calling Navigator.pushNamed
     final args = settings.arguments;
 
     switch (settings.name) {
-      case '/':
+      case RouteStrings.root:
         return MaterialPageRoute<dynamic>(
           builder: (_) => const HomePage(),
         );
-      case '/pick_image':
+      case RouteStrings.pickImage:
         return MaterialPageRoute<dynamic>(
           builder: (_) => const PickImagePage(),
         );
