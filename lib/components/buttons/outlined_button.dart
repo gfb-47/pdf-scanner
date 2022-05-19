@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import '../../theme/app_colors.dart';
 import '../../theme/app_typograpies.dart';
 
-class PrimaryButton extends StatelessWidget {
-  const PrimaryButton({
+class CustomOutlinedButton extends StatelessWidget {
+  const CustomOutlinedButton({
     Key? key,
     required this.onTap,
     required this.text,
@@ -22,17 +22,21 @@ class PrimaryButton extends StatelessWidget {
       margin: const EdgeInsets.symmetric(
         vertical: 8,
       ),
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
+      child: OutlinedButton(
+        style: OutlinedButton.styleFrom(
           primary: AppColors.primary,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20.0),
+          ),
+          side: BorderSide(
+            color: AppColors.primary,
+            width: 2,
           ),
         ),
         onPressed: onTap,
         child: Text(
           text,
-          style: AppTypographies.primaryButtonText,
+          style: AppTypographies.outlinedButtonText,
           textAlign: TextAlign.center,
         ),
       ),
