@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../components/buttons/primary_button.dart';
+import '../../../../components/buttons/outlined_button.dart';
 
 class PickImagePage extends StatelessWidget {
   const PickImagePage({Key? key}) : super(key: key);
@@ -13,7 +13,7 @@ class PickImagePage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              PrimaryButton(onTap: () => null, text: 'Pick image'),
+              CustomOutlinedButton(onTap: () => null, text: 'Pick image'),
             ],
           ),
         ));
