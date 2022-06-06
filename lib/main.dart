@@ -10,6 +10,7 @@ void main() {
         child: MaterialApp(
       home: HomePage(),
       initialRoute: '/',
+      debugShowCheckedModeBanner: false,
       onGenerateRoute: RouteGenerator.generateRoute,
     )),
   );

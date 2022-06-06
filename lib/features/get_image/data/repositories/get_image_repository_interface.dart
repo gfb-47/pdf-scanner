@@ -2,8 +2,41 @@ import 'package:dartz/dartz.dart';
 
 import '../../../../core/error/failures.dart';
 import '../../domain/entities/image_entity.dart';
+import '../../domain/repositories/get_image_repository.dart';
+import '../datasources/camera_data_source.dart';
+import '../datasources/gallery_data_source.dart';
+import '../models/image_model.dart';
 
-abstract class IGetImageRepository {
-  Future<Either<Failure, ImageEntity>> takePicture();
-  Future<Either<Failure, ImageEntity>> pickImage();
+class GetImageRepository implements IGetImageRepository {
+  final ICameraDataSource _cameraDatasource;
+  final IGalleryDatasource _galleryDataSource;
+
+  GetImageRepository({
+    required ICameraDataSource cameraDatasource,
+    required IGalleryDatasource galleryDatasource,
+  })  : _cameraDatasource = cameraDatasource,
+        _galleryDataSource = galleryDatasource;
+  @override
+  Future<Either<Failure, ImageEntity>> takePicture() async {
+    ImageModel? image;
+    try {
+      final imagePath = (await _cameraDatasource.takePicture()).imagePath;
+      image = ImageModel(imagePath: imagePath);
+    } catch (e) {
+      return Left(CameraDatasourceFailure());
+    }
+    return Right(image);
+  }
+
+  @override
+  Future<Either<Failure, ImageEntity>> pickImage() async {
+    ImageModel? image;
+    try {
+      final imagePath = (await _galleryDataSource.pickImage()).imagePath;
+      image = ImageModel(imagePath: imagePath);
+    } catch (e) {
+      return Left(CameraDatasourceFailure());
+    }
+    return Right(image);
+  }
 }

@@ -1,11 +1,33 @@
 import 'package:equatable/equatable.dart';
 
-abstract class Failure extends Equatable {
+abstract class Failure extends Equatable implements Exception {}
+
+class CameraDatasourceFailure extends Failure {
   @override
-  List<Object> get props => [];
+  // TODO: implement props
+  List<Object?> get props => [];
 }
 
-// General failures
-class ServerFailure extends Failure {}
+class GalleryDatasourceFailure extends Failure {
+  @override
+  // TODO: implement props
+  List<Object?> get props => [];
+}
 
-class CacheFailure extends Failure {}
+class InvalidUserParam extends Failure {
+  @override
+  // TODO: implement props
+  List<Object?> get props => [];
+}
+
+class NullUserParam extends Failure {
+  @override
+  // TODO: implement props
+  List<Object?> get props => [];
+}
+
+class EmptyList extends Failure {
+  @override
+  // TODO: implement props
+  List<Object?> get props => [];
+}

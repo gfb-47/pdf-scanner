@@ -3,16 +3,16 @@ import 'package:equatable/equatable.dart';
 
 import '../../../../core/error/failures.dart';
 import '../../../../core/usecases/usecase.dart';
-import '../../data/repositories/get_image_repository_interface.dart';
 import '../entities/image_entity.dart';
+import '../repositories/get_image_repository.dart';
 
 class PickImageUsecase implements UseCase<ImageEntity, Params> {
   PickImageUsecase(this.repository);
   final IGetImageRepository repository;
 
   @override
-  Future<Either<Failure, ImageEntity>> call(Params params) async {
-    return await repository.pickImage();
+  Future<Either<Failure, ImageEntity>> call(Params params) {
+    return repository.pickImage();
   }
 }
 
