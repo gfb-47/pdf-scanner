@@ -33,7 +33,7 @@ class GetImagePage extends HookWidget {
             ),
             PrimaryButton(
               onTap: () => controller.takePicture(),
-              text: 'Tirar Foto',
+              text: 'Take Picture',
             ),
             Container(
               padding: const EdgeInsets.symmetric(
@@ -46,7 +46,7 @@ class GetImagePage extends HookWidget {
             ),
             CustomOutlinedButton(
               onTap: () => controller.pickImage(),
-              text: 'Escolher da Galeria',
+              text: 'Choose From Gallery',
             ),
           ],
         ),

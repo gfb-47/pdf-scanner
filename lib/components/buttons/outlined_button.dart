@@ -17,7 +17,7 @@ class CustomOutlinedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width * 0.7,
+      width: MediaQuery.of(context).size.width * 0.8,
       height: 60,
       margin: const EdgeInsets.symmetric(
         vertical: 8,
@@ -34,10 +34,24 @@ class CustomOutlinedButton extends StatelessWidget {
           ),
         ),
         onPressed: onTap,
-        child: Text(
-          text,
-          style: AppTypographies.outlinedButtonText,
-          textAlign: TextAlign.center,
+        child: Stack(
+          alignment: Alignment.centerLeft,
+          children: [
+            const Icon(
+              Icons.photo,
+              size: 36,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  text,
+                  style: AppTypographies.outlinedButtonText,
+                  textAlign: TextAlign.center,
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );
