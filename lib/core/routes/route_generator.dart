@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../features/get_image/presentation/pages/pick_image_page.dart';
-import '../../features/home/presentation/pages/home_page.dart';
+import '../../features/get_image/presentation/get_image_page.dart';
 import 'route_strings.dart';
 
 class RouteGenerator {
@@ -10,13 +9,9 @@ class RouteGenerator {
     final args = settings.arguments;
 
     switch (settings.name) {
-      case RouteStrings.root:
+      case RouteStrings.getImage:
         return MaterialPageRoute<dynamic>(
-          builder: (_) => const HomePage(),
-        );
-      case RouteStrings.pickImage:
-        return MaterialPageRoute<dynamic>(
-          builder: (_) => const PickImagePage(),
+          builder: (_) => GetImagePage(),
         );
 
       // if (args is String) {

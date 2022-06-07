@@ -17,4 +17,9 @@ class AppTypographies {
     fontWeight: FontWeight.w600,
     color: AppColors.primary,
   );
+
+  static final TextStyle normalText = GoogleFonts.sourceSansPro(
+    fontSize: 20,
+    fontWeight: FontWeight.w400,
+  );
 }

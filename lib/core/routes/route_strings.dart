@@ -5,5 +5,5 @@ class RouteStrings {
   static const root = '/';
 
   ///```/pick_image```
-  static const pickImage = '/pick_image';
+  static const getImage = '/get_image';
 }

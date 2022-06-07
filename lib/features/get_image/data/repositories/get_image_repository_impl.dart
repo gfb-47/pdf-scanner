@@ -8,14 +8,15 @@ import '../datasources/gallery_data_source.dart';
 import '../models/image_model.dart';
 
 class GetImageRepository implements IGetImageRepository {
-  final ICameraDataSource _cameraDatasource;
-  final IGalleryDatasource _galleryDataSource;
-
   GetImageRepository({
     required ICameraDataSource cameraDatasource,
     required IGalleryDatasource galleryDatasource,
   })  : _cameraDatasource = cameraDatasource,
         _galleryDataSource = galleryDatasource;
+
+  final ICameraDataSource _cameraDatasource;
+  final IGalleryDatasource _galleryDataSource;
+
   @override
   Future<Either<Failure, ImageEntity>> takePicture() async {
     ImageModel? image;
