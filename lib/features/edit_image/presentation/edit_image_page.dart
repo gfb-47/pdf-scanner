@@ -31,29 +31,31 @@ class EditImagePage extends HookWidget {
               filterQuality: FilterQuality.high,
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              CustomCircularIconButton(
-                iconSize: 32,
-                icon: Icons.contrast,
-                backgroundColor: AppColors.primaryAlt,
-                splashColor: AppColors.black,
-                color: AppColors.white,
-                function: () {},
-              ),
-              const SizedBox(
-                width: 16,
-              ),
-              CustomCircularIconButton(
-                iconSize: 32,
-                icon: Icons.rotate_right,
-                backgroundColor: AppColors.primaryAlt,
-                splashColor: AppColors.black,
-                color: AppColors.white,
-                function: () {},
-              ),
-            ],
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CustomCircularIconButton(
+                  iconSize: 32,
+                  icon: Icons.contrast,
+                  backgroundColor: AppColors.primaryAlt,
+                  splashColor: AppColors.black,
+                  color: AppColors.white,
+                  function: () {},
+                ),
+                const SizedBox(
+                  width: 16,
+                ),
+                CustomCircularIconButton(
+                  iconSize: 32,
+                  icon: Icons.rotate_right,
+                  backgroundColor: AppColors.primaryAlt,
+                  splashColor: AppColors.black,
+                  color: AppColors.white,
+                  function: () {},
+                ),
+              ],
+            ),
           ),
         ],
       ),
