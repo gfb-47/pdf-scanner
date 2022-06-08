@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:lottie/lottie.dart';
 
 import '../../../components/buttons/outlined_button.dart';
@@ -7,7 +6,7 @@ import '../../../components/buttons/primary_button.dart';
 import '../../../theme/app_typograpies.dart';
 import 'get_image_controller.dart';
 
-class GetImagePage extends HookWidget {
+class GetImagePage extends StatelessWidget {
   GetImagePage({
     Key? key,
   }) : super(key: key);
