@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:lottie/lottie.dart';
 
-import '../../../components/buttons/outlined_button.dart';
-import '../../../components/buttons/primary_button.dart';
-import '../../../theme/app_typograpies.dart';
+import '../../../shared/components/buttons/outlined_button.dart';
+import '../../../shared/components/buttons/primary_button.dart';
+import '../../../shared/theme/app_typograpies.dart';
 import 'get_image_controller.dart';
 
 class GetImagePage extends HookWidget {
@@ -32,7 +32,7 @@ class GetImagePage extends HookWidget {
               ),
             ),
             PrimaryButton(
-              onTap: () => controller.takePicture(),
+              onTap: () => controller.takePicture(context),
               text: 'Take Picture',
             ),
             Container(
@@ -45,7 +45,7 @@ class GetImagePage extends HookWidget {
               ),
             ),
             CustomOutlinedButton(
-              onTap: () => controller.pickImage(),
+              onTap: () => controller.pickImage(context),
               text: 'Choose From Gallery',
             ),
           ],
