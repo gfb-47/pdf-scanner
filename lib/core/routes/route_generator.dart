@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
+import '../../features/edit_image/presentation/edit_image_page.dart';
 import '../../features/get_image/presentation/get_image_page.dart';
 import 'route_strings.dart';
 
@@ -13,6 +16,17 @@ class RouteGenerator {
         return MaterialPageRoute<dynamic>(
           builder: (_) => GetImagePage(),
         );
+
+      case RouteStrings.editImage:
+        if (args is File) {
+          return MaterialPageRoute<dynamic>(
+            builder: (_) => EditImagePage(
+              args: args,
+            ),
+          );
+        } else {
+          return _errorRoute();
+        }
 
       // if (args is String) {
       //   return MaterialPageRoute<dynamic>(

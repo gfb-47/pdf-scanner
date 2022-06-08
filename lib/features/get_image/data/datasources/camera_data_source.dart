@@ -18,8 +18,6 @@ class CameraDatasource implements ICameraDataSource {
     final pickedImage = await ImagePicker.platform.pickImage(
       source: ImageSource.camera,
       imageQuality: 100,
-      maxHeight: 100,
-      maxWidth: 100,
     );
     if (pickedImage != null) {
       return ImageModel(imagePath: pickedImage.path);

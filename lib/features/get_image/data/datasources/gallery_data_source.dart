@@ -18,8 +18,6 @@ class GalleryDatasource implements IGalleryDatasource {
     final pickedImage = await ImagePicker.platform.pickImage(
       source: ImageSource.gallery,
       imageQuality: 100,
-      maxHeight: 100,
-      maxWidth: 100,
     );
     if (pickedImage != null) {
       return ImageModel(imagePath: pickedImage.path);
