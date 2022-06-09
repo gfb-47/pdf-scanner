@@ -4,11 +4,11 @@ import 'package:extended_image/extended_image.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-import '../../../../components/buttons/outlined_button.dart';
-import '../../../../components/buttons/primary_button.dart';
+import '../../../../shared/components/buttons/outlined_button.dart';
+import '../../../../shared/components/buttons/primary_button.dart';
 import '../../../../injection_container.dart';
-import '../../../../theme/app_colors.dart';
-import '../../../../theme/app_typograpies.dart';
+import '../../../../shared/theme/app_colors.dart';
+import '../../../../shared/theme/app_typograpies.dart';
 import '../../../get_image/domain/entities/image_entity.dart';
 import '../controller/crop_image_page_controller.dart';
 

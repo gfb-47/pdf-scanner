@@ -1,12 +1,11 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 
 import '../../../shared/components/buttons/icon_button.dart';
 import '../../../shared/theme/app_colors.dart';
 
-class EditImagePage extends HookWidget {
+class EditImagePage extends StatelessWidget {
   const EditImagePage({
     Key? key,
     required this.args,
