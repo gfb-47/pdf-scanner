@@ -22,4 +22,14 @@ class AppTypographies {
     fontSize: 20,
     fontWeight: FontWeight.w400,
   );
+
+  static final TextStyle dialogTitle = GoogleFonts.sourceSansPro(
+    fontSize: 22,
+    fontWeight: FontWeight.w500,
+  );
+
+  static final TextStyle dialogContent = GoogleFonts.sourceSansPro(
+    fontSize: 16,
+    fontWeight: FontWeight.w400,
+  );
 }

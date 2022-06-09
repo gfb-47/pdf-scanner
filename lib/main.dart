@@ -8,7 +8,7 @@ import 'core/routes/route_generator.dart';
 import 'features/get_image/presentation/pages/get_image_page.dart';
 import 'injection_container.dart';
 import 'injection_container.dart' as di;
-import 'theme/app_theme.dart';
+import 'shared/theme/app_theme.dart';
 
 void main() async {
   await di.init();

@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:pdf_scanner/injection_container.dart';
 
-import '../../../../components/buttons/outlined_button.dart';
-import '../../../../components/buttons/primary_button.dart';
-import '../../../../theme/app_typograpies.dart';
+import '../../../../shared/components/buttons/primary_button.dart';
+import '../../../../shared/components/buttons/outlined_button.dart';
+import '../../../../shared/theme/app_colors.dart';
+import '../../../../shared/theme/app_typograpies.dart';
 import '../controller/get_image_page_controller.dart';
 
 class GetImagePage extends StatelessWidget {

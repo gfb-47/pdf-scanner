@@ -1,7 +1,6 @@
 class RouteStrings {
   RouteStrings._();
 
-  ///```/```
   static const root = '/';
 
   ///```/get_image```

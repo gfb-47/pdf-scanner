@@ -5,6 +5,11 @@ import 'package:flutter/material.dart';
 import '../../features/crop_image/presentation/pages/crop_image_page.dart';
 import '../../features/get_image/data/models/image_model.dart';
 import '../../features/get_image/presentation/pages/get_image_page.dart';
+import 'dart:io';
+
+import 'package:flutter/material.dart';
+
+import '../../features/edit_image/presentation/edit_image_page.dart';
 import 'route_strings.dart';
 
 class RouteGenerator {
