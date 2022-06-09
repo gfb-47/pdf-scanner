@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:lottie/lottie.dart';
+import 'package:pdf_scanner/injection_container.dart';
 
-import '../../../components/buttons/outlined_button.dart';
-import '../../../components/buttons/primary_button.dart';
-import '../../../theme/app_typograpies.dart';
-import 'get_image_controller.dart';
+import '../../../../components/buttons/outlined_button.dart';
+import '../../../../components/buttons/primary_button.dart';
+import '../../../../theme/app_typograpies.dart';
+import '../controller/get_image_page_controller.dart';
 
-class GetImagePage extends HookWidget {
+class GetImagePage extends StatelessWidget {
   GetImagePage({
     Key? key,
   }) : super(key: key);
-  final controller = GetImageController();
+  final controller = sl<HomePageController>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
