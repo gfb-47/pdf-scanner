@@ -1,11 +1,11 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+
 import '../../../../core/navigator_service.dart';
-import '../../../../shared/components/dialog/error_dialog.dart';
-import '../../../../shared/components/buttons/primary_button.dart';
 import '../../../../core/routes/route_strings.dart';
 import '../../../../injection_container.dart';
+import '../../../../shared/components/dialog/error_dialog.dart';
 import '../../domain/repositories/get_image_repository.dart';
 
 class HomePageController {
@@ -28,6 +28,7 @@ class HomePageController {
       },
       (image) {
         this.image = File(image.imagePath);
+        _navigationService.toNamed(RouteStrings.cropImage, arguments: image);
       },
     );
   }
@@ -44,8 +45,7 @@ class HomePageController {
       },
       (image) {
         this.image = File(image.imagePath);
-        sl<NavigationService>()
-            .toNamed(RouteStrings.cropImage, arguments: image);
+        _navigationService.toNamed(RouteStrings.cropImage, arguments: image);
       },
     );
   }
