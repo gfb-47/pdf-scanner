@@ -3,12 +3,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'core/navigator_service.dart';
-import 'core/routes/route_generator.dart';
-import 'features/get_image/presentation/pages/get_image_page.dart';
-import 'injection_container.dart';
-import 'injection_container.dart' as di;
-import 'shared/theme/app_theme.dart';
+import 'app/presenter/core/injection_container.dart' as di;
+import 'app/presenter/core/navigator_service.dart';
+import 'app/presenter/core/routes/route_generator.dart';
+import 'app/presenter/features/get_image/pages/get_image_page.dart';
+import 'app/presenter/shared/theme/app_theme.dart';
 
 void main() async {
   await di.init();
@@ -19,7 +18,7 @@ void main() async {
         theme: AppTheme.defaultTheme,
         initialRoute: '/',
         debugShowCheckedModeBanner: false,
-        navigatorKey: sl<NavigationService>().navigatorKey,
+        navigatorKey: di.sl<NavigationService>().navigatorKey,
         onGenerateRoute: RouteGenerator.generateRoute,
       ),
     ),
