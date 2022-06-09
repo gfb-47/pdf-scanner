@@ -1,9 +1,12 @@
-import 'dart:io';
+// ignore_for_file: cast_nullable_to_non_nullable
 
 import 'package:flutter/material.dart';
 
+import '../../features/crop_image/presentation/pages/crop_image_page.dart';
+import '../../features/get_image/data/models/image_model.dart';
+import '../../features/get_image/presentation/pages/get_image_page.dart';
+
 import '../../features/edit_image/presentation/edit_image_page.dart';
-import '../../features/get_image/presentation/get_image_page.dart';
 import 'route_strings.dart';
 
 class RouteGenerator {
@@ -16,18 +19,12 @@ class RouteGenerator {
         return MaterialPageRoute<dynamic>(
           builder: (_) => GetImagePage(),
         );
-
-      case RouteStrings.editImage:
-        if (args is File) {
-          return MaterialPageRoute<dynamic>(
-            builder: (_) => EditImagePage(
-              args: args,
-            ),
-          );
-        } else {
-          return _errorRoute();
-        }
-
+      case RouteStrings.cropImage:
+        return MaterialPageRoute<dynamic>(
+          builder: (_) => CropImagePage(
+            image: args as ImageModel,
+          ),
+        );
       // if (args is String) {
       //   return MaterialPageRoute<dynamic>(
       //     builder: (_) => SecondPage(

@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import '../../../../injection_container.dart';
 
-import '../../../shared/components/buttons/outlined_button.dart';
-import '../../../shared/components/buttons/primary_button.dart';
-import '../../../shared/theme/app_typograpies.dart';
-import 'get_image_controller.dart';
+import '../../../../shared/components/buttons/outlined_button.dart';
+import '../../../../shared/components/buttons/primary_button.dart';
+import '../../../../shared/theme/app_typograpies.dart';
+import '../controller/get_image_page_controller.dart';
 
 class GetImagePage extends StatelessWidget {
   GetImagePage({
     Key? key,
   }) : super(key: key);
-  final controller = GetImageController();
+  final controller = sl<HomePageController>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
