@@ -4,25 +4,24 @@ import 'package:flutter/material.dart';
 
 import '../../../../domain/entities/image_entity.dart';
 import '../../../core/injection_container.dart';
-import '../../../core/navigator_service.dart';
-import '../../../core/routes/route_strings.dart';
 import '../../../shared/components/buttons/icon_button.dart';
 import '../../../shared/theme/app_colors.dart';
+import '../controller/export_pdf_controller.dart';
 
-class EditImagePage extends StatelessWidget {
-  const EditImagePage({
+class ExportPdfPage extends StatelessWidget {
+  ExportPdfPage({
     Key? key,
     required this.image,
   }) : super(key: key);
 
   final ImageEntity image;
-  static final _navigationService = sl<NavigationService>();
+  final controller = sl<ExportPdfController>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Edit Image'),
+        title: const Text('Export PDF'),
       ),
       body: Column(
         children: [
@@ -42,37 +41,12 @@ class EditImagePage extends StatelessWidget {
               children: [
                 CustomCircularIconButton(
                   iconSize: 32,
-                  icon: Icons.contrast,
-                  backgroundColor: AppColors.primaryAlt,
-                  splashColor: AppColors.black,
-                  color: AppColors.white,
-                  function: () {},
-                ),
-                const SizedBox(
-                  width: 16,
-                ),
-                CustomCircularIconButton(
-                  iconSize: 32,
-                  icon: Icons.rotate_right,
-                  backgroundColor: AppColors.primaryAlt,
-                  splashColor: AppColors.black,
-                  color: AppColors.white,
-                  function: () {},
-                ),
-                const SizedBox(
-                  width: 16,
-                ),
-                CustomCircularIconButton(
-                  iconSize: 32,
-                  icon: Icons.task_alt,
+                  icon: Icons.picture_as_pdf,
                   backgroundColor: AppColors.primaryAlt,
                   splashColor: AppColors.black,
                   color: AppColors.white,
                   function: () {
-                    _navigationService.toNamed(
-                      RouteStrings.exportPdf,
-                      arguments: image,
-                    );
+                    controller.exportToPdf(image, context);
                   },
                 ),
               ],

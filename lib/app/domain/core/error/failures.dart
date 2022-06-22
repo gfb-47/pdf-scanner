@@ -12,6 +12,11 @@ class GalleryDatasourceFailure extends Failure {
   List<Object?> get props => [];
 }
 
+class ExportPdfDatasourceFailure extends Failure {
+  @override
+  List<Object?> get props => [];
+}
+
 class InvalidUserParam extends Failure {
   @override
   List<Object?> get props => [];
