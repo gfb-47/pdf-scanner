@@ -6,10 +6,11 @@ import 'package:flutter/material.dart';
 import 'package:pdf_scanner/features/crop_image/presentation/pages/crop_editor_helper.dart';
 import 'package:wechat_assets_picker/wechat_assets_picker.dart';
 
-import '../../../../injection_container.dart';
-import '../../../../shared/theme/app_colors.dart';
-import '../../../get_image/domain/entities/image_entity.dart';
-import '../controller/crop_image_page_controller.dart';
+
+import '../../../../app/domain/entities/image_entity.dart';
+import '../../../../app/presenter/core/injection_container.dart';
+import '../../../../app/presenter/features/crop_image/controller/crop_image_page_controller.dart';
+import '../../../../app/presenter/shared/theme/app_colors.dart';
 
 class CropImagePage extends StatelessWidget {
   CropImagePage({

@@ -8,7 +8,6 @@ import 'dart:ui';
 import 'package:extended_image/extended_image.dart';
 import 'package:flutter/foundation.dart';
 // ignore: implementation_imports
-import 'package:http_client_helper/http_client_helper.dart';
 import 'package:image/image.dart';
 import 'package:image_editor/image_editor.dart';
 
@@ -32,18 +31,7 @@ Future<Uint8List?> cropImageDataWithDartLibrary(
   // return ui.webOnlyInstantiateImageCodecFromUrl(
   //     resolved); //
 
-  final Uint8List data = kIsWeb &&
-          state.widget.extendedImageState.imageWidget.image
-              is ExtendedNetworkImageProvider
-      ? await _loadNetwork(state.widget.extendedImageState.imageWidget.image
-          as ExtendedNetworkImageProvider)
-
-      ///toByteData is not work on web
-      ///https://github.com/flutter/flutter/issues/44908
-      // (await state.image.toByteData(format: ui.ImageByteFormat.png))
-      //     .buffer
-      //     .asUint8List()
-      : state.rawImageData;
+  final Uint8List data = state.rawImageData;
 
   if (data == state.rawImageData &&
       state.widget.extendedImageState.imageProvider is ExtendedResizeImage) {
@@ -223,23 +211,4 @@ void _isolateEncodeImage(SendPort port) {
     final Image src = message[1] as Image;
     send.send(encodeJpg(src));
   });
-}
-
-/// it may be failed, due to Cross-domain
-Future<Uint8List> _loadNetwork(ExtendedNetworkImageProvider key) async {
-  try {
-    final Response? response = await HttpClientHelper.get(Uri.parse(key.url),
-        headers: key.headers,
-        timeLimit: key.timeLimit,
-        timeRetry: key.timeRetry,
-        retries: key.retries,
-        cancelToken: key.cancelToken);
-    return response!.bodyBytes;
-  } on OperationCanceledError catch (_) {
-    print('User cancel request ${key.url}.');
-    return Future<Uint8List>.error(
-        StateError('User cancel request ${key.url}.'));
-  } catch (e) {
-    return Future<Uint8List>.error(StateError('failed load ${key.url}. \n $e'));
-  }
 }
