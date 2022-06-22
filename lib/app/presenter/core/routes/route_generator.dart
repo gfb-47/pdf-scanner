@@ -7,6 +7,7 @@ import '../../features/crop_image/pages/crop_image_page.dart';
 import '../../features/edit_image/pages/edit_image_page.dart';
 import '../../features/export_pdf/pages/export_pdf_page.dart';
 import '../../features/get_image/pages/get_image_page.dart';
+import '../../features/splash/splash_page.dart';
 import 'route_strings.dart';
 
 class RouteGenerator {
@@ -15,6 +16,10 @@ class RouteGenerator {
     final args = settings.arguments;
 
     switch (settings.name) {
+      case RouteStrings.root:
+        return MaterialPageRoute<dynamic>(
+          builder: (_) => const SplashPage(),
+        );
       case RouteStrings.getImage:
         return MaterialPageRoute<dynamic>(
           builder: (_) => GetImagePage(),

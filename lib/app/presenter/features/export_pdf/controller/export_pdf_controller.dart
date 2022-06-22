@@ -19,7 +19,7 @@ class ExportPdfController {
   Future<void> exportToPdf(ImageEntity image, BuildContext context) async {
     try {
       await _exportPdfRepository.exportPdf(image, context);
-      _navigationService.toNamed(RouteStrings.root);
+      _navigationService.toNamed(RouteStrings.getImage);
       // ignore: avoid_dynamic_calls, use_build_context_synchronously
       await Flushbar<dynamic>(
         title: 'Success',
