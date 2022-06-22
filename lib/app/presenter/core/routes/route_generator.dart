@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import '../../../data/models/image_model.dart';
 import '../../features/crop_image/pages/crop_image_page.dart';
 import '../../features/edit_image/pages/edit_image_page.dart';
+import '../../features/export_pdf/pages/export_pdf_page.dart';
 import '../../features/get_image/pages/get_image_page.dart';
 import 'route_strings.dart';
 
@@ -27,6 +28,12 @@ class RouteGenerator {
       case RouteStrings.editImage:
         return MaterialPageRoute<dynamic>(
           builder: (_) => EditImagePage(
+            image: args as ImageModel,
+          ),
+        );
+      case RouteStrings.exportPdf:
+        return MaterialPageRoute<dynamic>(
+          builder: (_) => ExportPdfPage(
             image: args as ImageModel,
           ),
         );

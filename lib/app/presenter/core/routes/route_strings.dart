@@ -11,4 +11,7 @@ class RouteStrings {
 
   ///```/edit_image```
   static const editImage = '/edit_image';
+
+  ///```/export_pdf```
+  static const exportPdf = '/export_pdf';
 }

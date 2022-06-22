@@ -40,6 +40,9 @@ dependencies:
   google_fonts: ^2.3.2
   lottie: ^1.2.2
   extended_image: ^6.1.0
+  pdf: ^3.8.1
+  another_flushbar: ^1.10.29
+  path_provider: ^2.0.11
 
 dev_dependencies:
   flutter_test:
