@@ -17,22 +17,22 @@ class ExportPdfController {
   final IExportPdfRepository _exportPdfRepository;
 
   Future<void> exportToPdf(ImageEntity image, BuildContext context) async {
-    //   try {
-    //     await _exportPdfRepository.exportPdf(image, context);
-    //     _navigationService.toNamed(RouteStrings.root);
-    //     // ignore: avoid_dynamic_calls, use_build_context_synchronously
-    //     await Flushbar<dynamic>(
-    //       title: 'Success',
-    //       message: 'PDF created with success on your documents.',
-    //       duration: const Duration(seconds: 3),
-    //     ).show(context);
-    //   } catch (e) {
-    //     // ignore: avoid_dynamic_calls
-    //     await Flushbar<dynamic>(
-    //       title: 'Error',
-    //       message: 'Can not convert to PDF.',
-    //       duration: const Duration(seconds: 3),
-    //     ).show(context);
-    //   }
+    try {
+      await _exportPdfRepository.exportPdf(image, context);
+      _navigationService.toNamed(RouteStrings.root);
+      // ignore: avoid_dynamic_calls, use_build_context_synchronously
+      await Flushbar<dynamic>(
+        title: 'Success',
+        message: 'PDF created with success on your documents.',
+        duration: const Duration(seconds: 3),
+      ).show(context);
+    } catch (e) {
+      // ignore: avoid_dynamic_calls
+      await Flushbar<dynamic>(
+        title: 'Error',
+        message: 'Can not convert to PDF.',
+        duration: const Duration(seconds: 3),
+      ).show(context);
+    }
   }
 }
