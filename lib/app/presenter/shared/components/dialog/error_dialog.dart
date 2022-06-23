@@ -34,16 +34,16 @@ class ErrorDialog {
             Align(
               alignment: Alignment.bottomCenter,
               child: TextButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(AppColors.primary),
+                ),
+                onPressed: () => Navigator.of(context).pop(),
                 child: const Text(
                   'Continue',
                   style: TextStyle(
                     color: Colors.white,
                   ),
                 ),
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(AppColors.primary),
-                ),
-                onPressed: () => Navigator.of(context).pop(),
               ),
             ),
           ],
