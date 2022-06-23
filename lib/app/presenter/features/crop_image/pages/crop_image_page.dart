@@ -7,9 +7,8 @@ import 'package:wechat_assets_picker/wechat_assets_picker.dart';
 
 import '../../../../domain/entities/image_entity.dart';
 import '../../../core/injection_container.dart';
-import '../controller/crop_image_page_controller.dart';
 import '../../../shared/theme/app_colors.dart';
-import '../utils/crop_editor_helper.dart';
+import '../controller/crop_image_page_controller.dart';
 
 class CropImagePage extends StatelessWidget {
   CropImagePage({
@@ -95,7 +94,7 @@ class CropImagePage extends StatelessWidget {
                   ),
                   textColor: Colors.white,
                   onPressed: () {
-                    controller.editorKey.currentState!.rotate(right: true);
+                    controller.editorKey.currentState!.rotate();
                   },
                 ),
                 FlatButtonWithIcon(
@@ -130,11 +129,10 @@ class CropImagePage extends StatelessWidget {
               maxScale: 8.0,
               cornerColor:
                   AppColors.primary, //Cor das bordas (que agr é amarela)
-              cornerSize: Size(20, 5), //Tamanho das bordas amarela
+              cornerSize: const Size(20, 5), //Tamanho das bordas amarela
               lineColor: Colors.transparent,
               lineHeight: 5, //Tamanho da borda roxa + grid
-              cropRectPadding: EdgeInsets.all(50.0),
-              hitTestSize: 20.0,
+              cropRectPadding: const EdgeInsets.all(50.0),
             );
           },
         ));

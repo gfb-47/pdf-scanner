@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 import '../../domain/core/error/failures.dart';
 import '../../domain/entities/image_entity.dart';

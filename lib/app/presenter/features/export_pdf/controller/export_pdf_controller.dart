@@ -1,5 +1,5 @@
 import 'package:another_flushbar/flushbar.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:pdf/widgets.dart' as pw;
 
 import '../../../../domain/entities/image_entity.dart';
@@ -19,7 +19,7 @@ class ExportPdfController {
   Future<void> exportToPdf(ImageEntity image, BuildContext context) async {
     try {
       await _exportPdfRepository.exportPdf(image, context);
-      _navigationService.toNamed(RouteStrings.root);
+      _navigationService.toNamed(RouteStrings.getImage);
       // ignore: avoid_dynamic_calls, use_build_context_synchronously
       await Flushbar<dynamic>(
         title: 'Success',
