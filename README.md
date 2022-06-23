@@ -25,3 +25,4 @@ TODO
 - Personalizar toast
 - Melhorar contraste pra deixar mais parecido com o scaneado
 - Testes
+- Multipáginas
