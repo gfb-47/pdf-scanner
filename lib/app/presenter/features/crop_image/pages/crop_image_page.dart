@@ -34,7 +34,7 @@ class CropImagePage extends StatelessWidget {
               ),
               onPressed: () => controller.cropImage(false, image),
               child: const Text(
-                'Finalizar',
+                'Finish',
                 style: TextStyle(color: Colors.white),
               ),
             ),
@@ -53,7 +53,7 @@ class CropImagePage extends StatelessWidget {
                     color: Theme.of(context).iconTheme.color,
                   ),
                   label: Text(
-                    'Espelhar',
+                    'Flip',
                     style: TextStyle(
                       fontSize: 10.0,
                       color: AppColors.primaryAlt,
@@ -70,7 +70,7 @@ class CropImagePage extends StatelessWidget {
                     color: Theme.of(context).iconTheme.color,
                   ),
                   label: Text(
-                    'Girar Esquerda',
+                    'Rotate Left',
                     style: TextStyle(
                       fontSize: 8.0,
                       color: AppColors.primaryAlt,
@@ -87,7 +87,7 @@ class CropImagePage extends StatelessWidget {
                     color: Theme.of(context).iconTheme.color,
                   ),
                   label: Text(
-                    'Girar Direita',
+                    'Rotate Right',
                     style: TextStyle(
                       fontSize: 8.0,
                       color: AppColors.primaryAlt,
@@ -95,7 +95,7 @@ class CropImagePage extends StatelessWidget {
                   ),
                   textColor: Colors.white,
                   onPressed: () {
-                    controller.editorKey.currentState!.rotate(right: true);
+                    controller.editorKey.currentState!.rotate();
                   },
                 ),
                 FlatButtonWithIcon(
