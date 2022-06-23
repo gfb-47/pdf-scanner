@@ -41,7 +41,6 @@ class _SplashPageState extends State<SplashPage> {
   LottieBuilder _loadAnimation() {
     return Lottie.asset(
       'assets/animations/scan.json',
-      height: 500,
     );
   }
 }

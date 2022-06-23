@@ -44,8 +44,9 @@ dependencies:
   wechat_assets_picker: ^7.2.0
   pdf: ^3.8.1
   path_provider: ^2.0.11
-  another_flushbar: ^1.10.29
-  open_file_safe: ^3.2.3
+  another_flushbar: ^1.10.28
+  open_file: ^3.2.1
+
 
 dev_dependencies:
   flutter_test:

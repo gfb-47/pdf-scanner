@@ -5,8 +5,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../domain/entities/image_entity.dart';
 import '../../../core/injection_container.dart';
-import '../../../core/navigator_service.dart';
-import '../../../core/routes/route_strings.dart';
 import '../../../shared/components/buttons/icon_button.dart';
 import '../../../shared/theme/app_colors.dart';
 import '../controller/edit_image_controller.dart';
@@ -65,17 +63,6 @@ class EditImagePage extends ConsumerWidget {
                     splashColor: AppColors.black,
                     color: AppColors.white,
                     function: () => controller.toggleContrast(ref)),
-                const SizedBox(
-                  width: 16,
-                ),
-                CustomCircularIconButton(
-                  iconSize: 32,
-                  icon: Icons.rotate_right,
-                  backgroundColor: AppColors.primaryAlt,
-                  splashColor: AppColors.black,
-                  color: AppColors.white,
-                  function: () {},
-                ),
                 const SizedBox(
                   width: 16,
                 ),

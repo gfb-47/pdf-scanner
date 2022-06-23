@@ -17,7 +17,7 @@ class ExportPdfRepository implements IExportPdfRepository {
   Future<Either<Failure, Unit>> exportPdf(
       ImageEntity image, BuildContext context) async {
     try {
-      await _exportPdfDatasource.exportPdf(image, context);
+      await _exportPdfDatasource.exportPdf(image);
       return const Right(unit);
     } catch (e) {
       return Left(ExportPdfDatasourceFailure());
