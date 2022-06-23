@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../theme/app_colors.dart';
 import '../../theme/app_typograpies.dart';
 
 class ErrorDialog {
@@ -14,7 +15,8 @@ class ErrorDialog {
         return AlertDialog(
           title: Text(
             title,
-            style: AppTypographies.dialogTitle,
+            style:
+                AppTypographies.dialogTitle.copyWith(color: AppColors.primary),
             textAlign: TextAlign.center,
           ),
           content: SingleChildScrollView(
@@ -32,7 +34,15 @@ class ErrorDialog {
             Align(
               alignment: Alignment.bottomCenter,
               child: TextButton(
-                child: const Text('Continue'),
+                child: const Text(
+                  'Continue',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(AppColors.primary),
+                ),
                 onPressed: () => Navigator.of(context).pop(),
               ),
             ),
