@@ -1,28 +1,37 @@
-# pdf_scanner
+# PDF Scanner
 
-A new Flutter project.
+Um Scanner de PDF construído com Clean Architecture e Design Patterns.
 
-## Getting Started
+## Pictures
 
-This project is a starting point for a Flutter application.
+<img src="https://user-images.githubusercontent.com/46033500/175291685-7f67d639-d6fb-4b68-a50f-46032b1cd222.png" height="380" width="220"/>  <img src="https://user-images.githubusercontent.com/46033500/175291692-5124ead6-1598-4684-9c00-53debc834525.png" height="380" width="220"/>
 
-A few resources to get you started if this is your first Flutter project:
+<img src="https://user-images.githubusercontent.com/46033500/175291703-c74105af-b9c0-42c8-b40c-369460a3d60c.png" height="380" width="220"/>  <img src="https://user-images.githubusercontent.com/46033500/175291706-7a287866-da63-468c-81de-141a96d0d302.png" height="380" width="220"/>
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Built With
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+As principais dependências utilizadas no projeto e padrões de organização de pastas
 
+* [Riverpod](https://riverpod.dev/) -> Utilizado para gerência de estado
+* [GetIt](https://drift.simonbinder.eu/docs/getting-started/) -> Pacote para injeçao de dependencias
+* [Clean Dart](https://github.com/Flutterando/Clean-Dart) -> Uma proposta de implementação do Clean Architecture
+* [Git Flow](https://www.atlassian.com/br/git/tutorials/comparing-workflows/gitflow-workflow) -> Padronização do versionamento de código utilizando Git Flow
 
-TODO 
+## TODO 
 
-- Abrir PDF
-- Remover essa ultima tela de PDF
-- Loading enquanto cropa
-- Deixar imagem maior na hora docrop
-- Personalizar toast
-- Melhorar contraste pra deixar mais parecido com o scaneado
-- Testes
-- Multipáginas
+- [ ] Multipáginas 
+- [ ] Testes 
+- [ ] Abrir PDF
+- [ ] Bug do que muda o tamanho da imagem
+- [ ] Remover essa ultima tela de PDF
+- [ ] Loading enquanto cropa
+- [ ] Deixar imagem maior na hora do crop
+- [ ] Personalizar toast de pdf convertido com sucesso
+- [ ] Melhorar contraste pra deixar mais parecido com o scaneado 
+- [ ] Adicionar mais opções de personalização
+- [ ] Remover app bar na tela inicial
+- [ ] Mudar splash screen pra paleta
+- [ ] Publicar na App Store
+- [ ] Publicar na Play Store
+- [ ] Implementar o Google Adsense
+
