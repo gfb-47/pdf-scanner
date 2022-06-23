@@ -54,9 +54,14 @@ class ExportPdfDatasource implements IExportPdfDatasource {
   @override
   Future<void> savePdf(BuildContext context) async {
     try {
+<<<<<<< HEAD
       final dir = await getExternalStorageDirectory();
       final fileDir = '${dir!.path}/${DateTime.now()}.pdf';
       final file = File(fileDir);
+=======
+      final dir = await getApplicationSupportDirectory();
+      final file = File('${dir.path}/file.pdf');
+>>>>>>> e429c54bad9194a222b7ade443c68985f576271a
       await file.writeAsBytes(await pdf.save());
       // ignore: avoid_dynamic_calls
     } catch (e) {

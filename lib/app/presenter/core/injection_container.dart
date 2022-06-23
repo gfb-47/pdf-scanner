@@ -11,6 +11,7 @@ import '../../domain/usecases/export_pdf.dart';
 import '../../domain/usecases/pick_image.dart';
 import '../../domain/usecases/take_picture.dart';
 import '../features/crop_image/controller/crop_image_page_controller.dart';
+import '../features/edit_image/controller/edit_image_controller.dart';
 import '../features/export_pdf/controller/export_pdf_controller.dart';
 import '../features/get_image/controller/get_image_page_controller.dart';
 import 'navigator_service.dart';
@@ -21,6 +22,10 @@ Future<void> init() async {
   sl.registerLazySingleton(() => NavigationService());
 
   //Features
+
+  sl.registerFactory(
+    () => EditImagePageController(),
+  );
   sl.registerFactory(
     () => GetImagePageController(getImageRepository: sl()),
   );
